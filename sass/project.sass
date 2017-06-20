@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto')
+*
+    // border: 1px solid black
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+header
+    .jumbotron
+        height: 100vh
+        background: url("https://static.pexels.com/photos/34088/pexels-photo.jpg") 0/cover
+        .fade
+            height: 100%
+            width: 100%
+            background: rgba(55, 134, 172, .4)
+            display: flex
+            justify-content: center
+            align-items: center
+            .container
+                flex-basis: 38%
+                color: white
+                font-family: 'Roboto', sans-serif
+                text-align: center
+                h1
+                    font-size: 50px
+                    letter-spacing: 5px
+                    margin-top: 50px
+                p
+                    margin: 30px 0 100px 0
+                .icon1
+                    position: relative
+                    width: 50px
+                    height: 50px
+                    margin: 0 auto
+                    .circle
+                        border: 2px solid white
+                        display: block
+                        width: 100%
+                        height: 100%
+                        border-radius: 50%
+                    .triangle
+                        position: absolute
+                        top: 0%
+                        @extend .circle
+                        border-radius: 0px
+                        transform: rotate(45deg)
+                    .dot
+                        @extend .circle
+                        position: absolute
+                        top: 0%
+                        background: white
+                        transform: scale(.3)
+                        animation: dotting 3s ease-in-out infinite
+                .icon2
+                    position: relative
+                    border: 2px solid white
+                    width: 26px
+                    height: 50px
+                    margin: 0 auto
+                    border-radius: 13px
+                    display: flex
+                    justify-content: center
+                    &:hover
+                        .slider
+                            animation: slide 2s linear infinite
+                    .slider
+                        display: block
+                        border: 1px solid white
+                        border-radius: 50%
+                        width: 8px
+                        height: 8px
+                        background: white
+                        margin-top: 5px
+section
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 100px 0
+    .container
+        border: 2px solid black
+        font-family: 'Roboto', sans-serif
+        flex-basis: 50%
+        text-align: center
+        padding: 30px 60px 0
+        h2
+            font-size: 30px
+            display: inline-block
+            margin: 0 auto
+            padding: 0 60px
+            position: relative
+            top: -50px
+            background: white
+        p
+            margin: 0 0 30px 0
+.fade2
+    height: 100%
+    width: 100%
+    background: rgba(55, 134, 172, .4)    
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 100px 0
+.design
+    background: url("https://static.pexels.com/photos/169573/pexels-photo-169573.jpeg") 0/cover
+    display: block
+    padding: 0
+    .container
+        position: relative
+        border: 2px solid white
+        color: white
+        border-top: none
+        &:before
+            content: ""
+            position: absolute
+            left: 0
+            top: 0
+            border-top: 2px solid white
+            width: 15vw
+            background: transparent
+        &:after
+            content: ""
+            position: absolute
+            right: 0
+            top: 0
+            border-top: 2px solid white
+            width: 15vw
+            background: transparent
+        h2
+            background: transparent
+i.fa
+    font-size: 70px
+    display: block
+section
+    .icons
+        padding: 30px 120px 0
+    h3
+        margin: 10px 0
+        letter-spacing: 5px
+section.gallery
+    padding: 0
+    .jumbotron
+        h3
+            color: white
+            font-family: 'Roboto', sans-serif
+            margin: 0
+            position: absolute
+            bottom: 25px
+            left: 25px
+            user-select: none
+            cursor: pointer
+        width: 100%
+        display: flex
+        flex-wrap: wrap
+        div[class^="gal"]
+            position: relative
+            height: 200px
+            border: 6px solid white
+            border-left: none
+            border-top: none
+            &:hover
+                &:before
+                    background: rgba(55, 134, 172, 0)
+            &:nth-child(3), &:nth-child(6)
+                border-right: none
+            &:nth-child(4), &:nth-child(5), &:nth-child(6)
+                border-bottom: none
+            &:before
+                content: ""
+                position: absolute
+                left: 0
+                top: 0
+                width: 100%
+                height: 100%
+                background: rgba(55, 134, 172, .4)
+                transition: .5s
+                cursor: pointer
+                
+        .gal-left
+            flex: 30%
+            background: url("https://static.pexels.com/photos/300001/pexels-photo-300001.jpeg") 0/cover
+            
+        .gal-left.second
+            background: url("https://static.pexels.com/photos/196655/pexels-photo-196655.jpeg") 0/cover
+        .gal-center
+            flex: 40%
+            background: url("https://static.pexels.com/photos/265087/pexels-photo-265087.jpeg") 0/cover
+        .gal-center.second
+            background: url("https://static.pexels.com/photos/163130/keyboard-black-notebook-input-163130.jpeg") 0/cover
+        .gal-right
+            flex: 30%
+            background: url("https://static.pexels.com/photos/7112/woman-typing-writing-windows.jpg") 0/cover
+        .gal-right.second
+            background: url("https://static.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg") 0/cover
+button
+    background: rgba(20, 20, 20, 1)
+    border: none
+    color: white
+    font-family: 'Roboto', sans-serif
+    font-size: 20px
+    padding: 5px 60px
+    cursor: pointer
+    margin-bottom: 30px
+    transition: .5s
+    &:hover
+        background: rgba(20, 20, 20, .8)
+        transform: scale(1.2)
+footer
+    text-align: center
+    font-family: 'Roboto', sans-serif;
+    p
+        display: inline-block
+        margin: 0 0 20px 40px
+        position: relative
+        top: -15px
+    .icon1
+        position: relative
+        width: 40px
+        height: 40px
+        margin: 0 auto
+        display: inline-block
+        .circle
+            border: 2px solid black
+            display: block
+            width: 100%
+            height: 100%
+            border-radius: 50%
+        .triangle
+            position: absolute
+            top: 0%
+            @extend .circle
+            border-radius: 0px
+            transform: rotate(45deg)
+        .dot
+            @extend .circle
+            position: absolute
+            top: 0%
+            background: black
+            transform: scale(.3)
+            animation: dotting 3s ease-in-out infinite
+@keyframes dotting
+    0%
+        transform: scale(.3)
+    50%
+        transform: scale(.5)
+    100%
+        transform: scale(.3)
+@keyframes slide
+    0%
+        opacity: 1
+    5%
+        transform: translateY(0px)
+    15%
+        opacity: 1
+    40%
+        opacity: 1   
+    50%
+        transform: translateY(25px)
+    55%
+        opacity: 0
+    100%
+        opacity: 0
